@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grud product</title>
+    <!--link to bootstrap5-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+     <!--link to js-->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
+    <!--link to  separate-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <!--Jquery cdn  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!--sweetalert cdn-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" ></script>
+</head>
+<body>
+    <div class="container bg-danger mb-3">
+         <h1 class="text-info"> CURD IMAGE</h1>
+         <!-- Button trigger modal -->
+        <button type="button" class="btn btn-info  float-end mb-3 btn-add" data-bs-toggle="modal" data-bs-target="#exampleModal">
+         + Add product
+        </button>
+          <table class=" table table-light align-middle" sytle="table-layout:fixed;">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>PRICE</th>
+                <th>QTY</th>
+                <th>MADE_IN</th>
+                <th>IMAGE</th>
+                <th>ACTIVE</th>
+              </tr>
+            </thead>
+              <tbody></tbody>
+              <!-- <tr>
+                <td>2001</td>
+                <td>T-shirt</td>
+                <td>30.30$</td>
+                <td>40</td>
+                <td>Cambodian</td>
+                <td>
+                     <img  width ="70" src="" alt="not">
+                </td>
+                <td>
+                    <button class="btn btn-success">Edit</button>
+                    <button class="btn btn-danger">Delete</button>
+                </td>
+              </tr> -->
+          </table>
+          <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel  btn-add" >Add Product</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+             <form action="" class="w-100">
+             <div class="form-group mb-2"><!-- ID-->
+                  <label class="text-primary">ID</label>
+                  <input type="text" id="id" class="form-control">
+             </div>
+             <div class="form-group mb-2"><!--NAME-->
+                  <label class="text-primary">NAME</label>
+                  <input type="text" id="name" class="form-control">
+             </div>
+             <div class="form-group mb-2"><!--PRICE-->
+                  <label class="text-primary">PRICE</label>
+                  <input type="text" id="price" class="form-control">
+             </div>
+             <div class="form-group mb-2"><!--QTY-->
+                  <label class="text-primary">QTY</label>
+                  <input type="text" id="qty" class="form-control">
+             </div>
+             <div class="form-group mb-2"><!--MADE_IN-->
+                 <label class="text-primary" >MADE_IN</label>
+              <select id="made_in" class="form-select"">
+                <option value="Cambodian">Cambodian</option>
+                <option value="Thailand">Thailand</option>
+                <option value="Vietnam">Vietnam</option>
+                <option value="japan">japan</option>
+                <option value="india">India</option>
+                <option value="chinese">chinese</option>
+                <option value="United_States">United_States</option>
+                <option value="England">England</option>
+                <option value="Spain">Spain</option>
+                <option value="Korea">Korea</option>
+              </select>
+             </div>
+             <div class="form-group mb-2"><!--IMAGE-->
+                  <label class="text-success">Image</label>
+                  <input type="file" id="image" class="form-control">
+                  <div class="img">
+                    
+                  </div>
+                  <input type="hidden" name="" id="old_image">
+            </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal" >Close</button>
+          <button type="button" onclick="post_product();" id="btn-save" class="btn btn-success">Save</button>
+          <button type="button" onclick="" id="btn-update" class="btn btn-success">Save</button>
+        </div> 
+       </form>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div> 
+ </div>
+</body>
+</html>
+<script src="product.js"></script>
